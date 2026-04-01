@@ -30,15 +30,6 @@ This system is designed to manage patient records, prescriptions, and doctor app
 
 ---
 
-## ⚙️ Tech Stack & Implementation
-
-- **Framework:** Laravel 13 (Laravel Installer 5.x)
-- **Language:** PHP 8.x
-- **Database:** MySQL / SQLite
-- **ORM:** Eloquent ORM
-
----
-
 ## 🗂️ Database Tables
 
 ### 🧑 Patients
@@ -110,6 +101,15 @@ This system is designed to manage patient records, prescriptions, and doctor app
 ### Appointment Model
 - belongsTo(Patient)
 - belongsTo(Doctor)
+
+---
+
+## ⚙️ Tech Stack & Implementation
+
+- **Framework:** Laravel 13 (Laravel Installer 5.x)
+- **Language:** PHP 8.x
+- **Database:** MySQL / SQLite
+- **ORM:** Eloquent ORM
 
 ---
 
