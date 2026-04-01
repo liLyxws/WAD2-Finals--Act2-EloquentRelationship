@@ -2,6 +2,8 @@
 
 
 ## 📌 ERD Overview
+![Medical System ERD](img/ss.png)
+
 This system is designed to manage patient records, prescriptions, and doctor appointments using structured database relationships.
 
 ---
