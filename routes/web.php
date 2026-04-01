@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-git 
+    
 Route::get('/test', function () {
     return Patient::with(['medicalRecord', 'prescriptions', 'appointments.doctor'])->get();
 });
