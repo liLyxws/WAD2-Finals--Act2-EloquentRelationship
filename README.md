@@ -39,39 +39,57 @@ This system is designed to manage patient records, prescriptions, and doctor app
 
 ## 🗂️ Database Tables
 
-### Patients
-- id
-- name
-- gender
-- birth_date
+### 🧑 Patients
+| Field | Type | Description |
+|------|------|------------|
+| id | bigint | Primary Key |
+| name | string | Patient name |
+| gender | string | Gender |
+| birth_date | date | Birth date |
 
-### Medical Records
-- id
-- patient_id (FK)
-- blood_type
-- allergies
-- chronic_conditions
+---
 
-### Prescriptions
-- id
-- patient_id (FK)
-- medication_name
-- dosage
-- date_issued
+### 📄 Medical Records
+| Field | Type | Description |
+|------|------|------------|
+| id | bigint | Primary Key |
+| patient_id | bigint | Foreign Key (Patients) |
+| blood_type | string | Blood type |
+| allergies | text | Allergies |
+| chronic_conditions | text | Chronic illnesses |
 
-### Doctors
-- id
-- name
-- specialization
-- license_number
+---
 
-### Appointments
-- id
-- patient_id (FK)
-- doctor_id (FK)
-- appointment_date
-- reason_for_visit
-- status
+### 💊 Prescriptions
+| Field | Type | Description |
+|------|------|------------|
+| id | bigint | Primary Key |
+| patient_id | bigint | Foreign Key (Patients) |
+| medication_name | string | Medicine name |
+| dosage | string | Dosage |
+| date_issued | date | Date issued |
+
+---
+
+### 👨‍⚕️ Doctors
+| Field | Type | Description |
+|------|------|------------|
+| id | bigint | Primary Key |
+| name | string | Doctor name |
+| specialization | string | Field of expertise |
+| license_number | string | License number |
+
+---
+
+### 📅 Appointments
+| Field | Type | Description |
+|------|------|------------|
+| id | bigint | Primary Key |
+| patient_id | bigint | Foreign Key (Patients) |
+| doctor_id | bigint | Foreign Key (Doctors) |
+| appointment_date | date | Appointment date |
+| reason_for_visit | string | Reason |
+| status | string | Status |
 
 ---
 
