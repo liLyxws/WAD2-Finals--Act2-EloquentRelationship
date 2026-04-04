@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Patient; // Import mo yung Model
+use App\Models\Patient; 
 
 class PatientController extends Controller
 {
@@ -12,6 +12,6 @@ class PatientController extends Controller
         
         $patients = Patient::with(['medicalRecord', 'prescriptions', 'appointments.doctor'])->get();
         
-        return response()->json($patients);
+        return view('index', compact('patients'));
     }
 }
