@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Patient extends Model
@@ -25,4 +25,10 @@ class Patient extends Model
     {
         return $this->belongsToMany(Doctor::class, 'appointments');
     }
+    
+    use HasFactory; 
+
+    protected $fillable = ['name' , 'gender' , 'birth_date']; 
+
+    
 }
