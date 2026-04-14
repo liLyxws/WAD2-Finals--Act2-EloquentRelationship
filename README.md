@@ -1,10 +1,24 @@
-# 🏥 Medical Record & Appointment System (for Activity 2)
+# 🏥    Med-Core: Laravel Middleware + CRUD Integration
 
-
-## 📌 ERD Overview
+## 📌 Project  Overview
 ![Medical System ERD](img/ss.png)
 
-This system is designed to manage patient records, prescriptions, and doctor appointments using structured database relationships.
+This project is a functional Laravel application developed for the Middleware + CRUD Integration activity. It builds upon the previously designed Eloquent Relationships (Activity 2), transforming the ERD into a working system with a User Interface, full CRUD operations, and Role-Based Access Control (RBAC).
+
+---
+## 🛠️ Key Features
+
+- Full CRUD Operations: Implementation of Create, Read, Update, and Delete functionality for Customers (Patients), Products (Medical Records), and Orders (Appointments).
+- Eloquent Relationships & Eager Loading: Utilizes with() to load related data efficiently, minimizing database queries (N+1 problem prevention).
+- Access Rules (Middleware):
+    -Authenticated Only: Only logged-in users can access the system.
+
+    - Entity Ownership: Regular users can only see and manage entities they have created.
+
+    - Admin Privileges: Only users with the admin role can see all records and perform restricted actions (Edit/Delete).
+
+    - Dynamic UI: Action buttons (Edit/Delete) are hidden or shown dynamically based on the user's role and permissions.
+
 
 ---
 
